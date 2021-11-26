@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:13:02 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/25 13:14:27 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/26 19:35:14 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t				i;
 
 	destination = (unsigned char *)dst;
-	source = (unsigned char *)src;
+	source = (char *)src;
 	i = 0;
 	while (i < n)
 	{

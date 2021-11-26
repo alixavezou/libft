@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 12:49:32 by alixavezo         #+#    #+#             */
-/*   Updated: 2021/11/26 18:09:06 by aavezou          ###   ########.fr       */
+/*   Updated: 2021/11/26 19:12:11 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	const char	*source;
 	size_t		i;
 
-	destination = dst;
-	source = src;
+	destination = (unsigned char *)dst;
+	source = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
