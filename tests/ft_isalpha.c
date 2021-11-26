@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 13:09:25 by alixavezo         #+#    #+#             */
-/*   Updated: 2021/11/25 23:44:39 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/26 17:55:14 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,4 @@ int	ft_isalpha(int c)
 		return (1);
 	}
 	return (0);
-}
-
-int	main()
-{
-	char	c;
-
-	c = '!';
-	printf("oui ou non %d", ft_isalpha(c));
 }
