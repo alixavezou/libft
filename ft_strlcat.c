@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 22:44:47 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/24 23:29:27 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/29 10:46:11 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = ft_strlen(dst);
-	while (src[i])
+	k = ft_strlen(src);
+	if (size <= j)
+		return (size);
+	while (j + i <= size - 1)
 	{
-		dst[j] == src[i];
+		dst[j + i] == src[i];
 		i++;
-		j++;
 	}
-	return (dst);
+	dst[j + i] = '\0';
+	return (j + k);
 }

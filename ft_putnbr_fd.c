@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 18:32:52 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/24 23:22:09 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/29 10:18:30 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else if (n >= 0 && n < 10)
 	{
-		ft_putchar_fd(n + 'O', fd);
+		ft_putchar_fd(n + '0', fd);
 	}
 	else if (nb < 0)
 	{

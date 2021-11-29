@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:58:00 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/26 19:45:57 by aavezou          ###   ########.fr       */
+/*   Updated: 2021/11/29 10:35:52 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ int		ft_isalnum(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strlen(char *str);
-int		ft_strlcpy(char *str);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dest, char *src, size_t size);
 
 char	*ft_strdup(char *src);
 char	*ft_strchr(const char *s, int c);
