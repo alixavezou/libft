@@ -18,8 +18,6 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*pointeur;
 
 	espace = count * size;
-	if (espace == 0)
-		return (NULL);
 	pointeur = malloc(espace);
 	if (!pointeur)
 		return (NULL);
