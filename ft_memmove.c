@@ -6,7 +6,7 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 22:26:37 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/26 19:50:08 by aavezou          ###   ########.fr       */
+/*   Updated: 2021/11/30 13:38:03 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*source;
 	size_t			i;
 
+	if (!dst && !src)
+		return (NULL);
 	destination = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;

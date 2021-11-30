@@ -6,20 +6,24 @@
 /*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:58:33 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/29 10:34:05 by aavezou          ###   ########.fr       */
+/*   Updated: 2021/11/30 14:15:42 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const char		*dest;
+	char			*dest;
 	size_t			i;
 	size_t			j;
 
 	i = 0;
 	j = 0;
+	if (!s1)
+		return (NULL);
 	dest = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!dest)
 		return (NULL);
@@ -35,5 +39,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	return ((char *)dest);
 }

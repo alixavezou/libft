@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:29:51 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/24 22:23:16 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/29 13:18:26 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 	{
 		if (*p++ == (unsigned char)c)
-			return ((void *)p);
+			return ((char *)p - 1);
 	}
 	return (NULL);
 }

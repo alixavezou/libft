@@ -6,7 +6,7 @@
 #    By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/26 17:35:05 by aavezou           #+#    #+#              #
-#    Updated: 2021/11/26 19:26:36 by aavezou          ###   ########.fr        #
+#    Updated: 2021/11/30 14:30:18 by aavezou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,19 +62,19 @@ O_FILES = $(addsuffix .o, $(C_FILES))
 HDRS = libft.h
 
 .c.o: 
-	${CC} ${CFLAGS} -c -g $< -o ${<:.c=.o} 
+	$(CC) $(CFLAGS) -c -g $< -o $(<:.c=.o)
 
-${NAME}: ${O_FILES} 
-	${AR} $@ $^
+$(NAME): $(O_FILES) 
+	$(AR) $@ $^
 
 all: $(NAME)
 
 clean:
-	${RM} ${O_FILES}
+	$(RM) $(O_FILES)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
-re: fclean all
+re: clean all
 
 .PHONY: all clean fclean re 

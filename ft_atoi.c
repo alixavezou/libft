@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 14:47:28 by alixavezo         #+#    #+#             */
-/*   Updated: 2021/11/23 18:22:40 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/29 18:02:44 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	nb;
@@ -28,8 +28,8 @@ int	ft_atoi(char *str)
 		if (str[i] == '-')
 		{
 			signe = signe * -1;
-			i++;
 		}
+		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aavezou <aavezou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:55:01 by alixavezou        #+#    #+#             */
-/*   Updated: 2021/11/26 15:33:09 by alixavezou       ###   ########.fr       */
+/*   Updated: 2021/11/30 16:25:25 by aavezou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	ft_count_words(char const *s, char c)
 
 	i = 0;
 	count = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
@@ -49,6 +51,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	tab = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!tab)
 		return (NULL);
@@ -64,18 +68,6 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 	}
-	tab[i] = '\0';
+	tab[i] = 0;
 	return (tab);
-}
-
-int	main(void)
-{
-	char	**dest;
-
-	dest = ft_split("coucou?ca?va?mabelle?", '?');
-	printf("%s\n", dest[0]);
-	printf("%s\n", dest[1]);
-	printf("%s\n", dest[2]);
-	printf("%s\n", dest[3]);
-	return (0);
 }
