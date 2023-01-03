@@ -6,7 +6,7 @@
 #    By: alixavezou <alixavezou@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/26 17:35:05 by aavezou           #+#    #+#              #
-#    Updated: 2023/01/03 16:10:14 by alixavezou       ###   ########.fr        #
+#    Updated: 2023/01/03 16:19:51 by alixavezou       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,14 @@ SRC_NAME =	ft_isalpha.c \
 			ft_putnbr_fd.c \
 			get_next_line_utils.c \
 			get_next_line.c \
+			printf_putchar.c \
+			printf_putcharcount.c \
+			printf_putnbr.c \
+			printf_putstrcount.c \
+			printf_countnb.c \
+			printf_checktype.c \
+			printf_libftprintf.c \
+			printf_printandcount.c \
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
